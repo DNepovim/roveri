@@ -1,0 +1,45 @@
+#
+# Requires MetaBox plugin: http://metabox.io/
+#
+
+register:
+	contacts:
+		title: Kontakty
+		context: normal # normal, advanced, side
+		post_types:
+			- unit
+			- event
+		fields:
+			web:
+				name: Web
+				type: url
+			fb:
+				name: Facebook
+				type: url
+			instagram:
+				name: instagram
+				type: url
+			twitter:
+				name: twitter
+				type: url
+			mail:
+				name: E-mail
+				type: mail
+
+	data:
+		title: Data
+		context: normal # normal, advanced, side
+		post_types:
+			- event
+		fields:
+			start:
+				name: Začátek
+				type: datetime
+			end:
+				name: Konec
+				type: datetime
+			place:
+				name: Místo
+				type: text
+
+

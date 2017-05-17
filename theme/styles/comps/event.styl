@@ -1,0 +1,47 @@
+.event
+	border-radius $radius
+	border 1px $c-border solid
+	margin 1rem 0
+	overflow hidden
+
+	&-thumb
+		size 100% 180px
+		background-color alpha($c-main, 10%)
+		background-size cover
+		background-position center center
+		background-repeat no-repeat
+		margin 0
+
+	&-box
+		padding 1rem 1.6rem 0.3rem
+
+		@extend $clearfix
+
+	&-title
+		color $c-main
+		margin 0 0 0.1em
+
+	&-place
+		margin 0
+		font-weight normal
+		font-size 1rem
+
+	&-tags
+		font-size 0.8rem
+		margin-top 0.2rem
+
+		&-item
+			color gray
+			margin-right 0.5em
+
+
+	&-date
+		float left
+		text-align center
+		margin-right 1.6rem
+
+		&-day
+			display block
+			font-size 2.5rem
+			font-weight bold
+			line-height 0.8em

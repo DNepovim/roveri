@@ -17,17 +17,18 @@ remove:
 	- posts
 	- comments
 register:
-	header:
-		public: false
-		label: Hlavičky
-		menu_icon: images-alt
+	unit:
+		label: Kmeny
+		menu_icon: dashicons-groups
 		supports:
 			- title
-			- editor
 			- thumbnail
 
-	video:
-		label: Videa
-		menu_icon: backup
+	event:
+		label: Akce
+		menu_icon: dashicons-calendar
+		supports:
+			- title
+			- thumbnail
+			- editor
 
-	venue: Místa

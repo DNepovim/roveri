@@ -21,6 +21,12 @@
     "theme/fonts/**",
     "node_modules/lt-ie-9/lt-ie-9.min.js"
   ],
+  "sprites":[
+    {
+      "path" : "theme/images/sources/*.svg",
+      "name" : false
+    }
+  ],
   "buildstamp": [
     "public/assets/styles/index.css",
     "public/assets/styles/oldie.css",
