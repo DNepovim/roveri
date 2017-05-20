@@ -30,7 +30,7 @@
 
 	<script>
 		initComponents = [
-			{ name: 'shapes', data: { url: {$assetsPath}+'/images/shapes.svg' } }
+			{ name: 'shapes', data: { url: {$assetsPath}+'/sprites/shapes.svg' } }
 		]
 	</script>
 
@@ -44,9 +44,19 @@
 	<div class="container">
 		<div class="row">
 
-			<nav class="yeah-3">
-				{include components/shape.latte name => logo}
-			</nav>
+			<header class="yeah-3 yeah-sticky" role="banner">
+				<figure class="main-logo">
+					{include components/shape.latte name => logo}
+				</figure>
+				<h1 class="main-title"><strong>Roveři</strong>z Prahy</h1>
+				<nav class="main-nav">
+					<ul class="main-nav-container">
+						<li class="main-nav-item" n:foreach="$main_menu as $item">
+							<a href="{$item|wp_permalink}" class="main-nav-link">{$item|wp_title}</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
 
 			{block content}{/block}
 
