@@ -3,6 +3,18 @@
 	border 1px $c-border solid
 	margin 1rem 0
 	overflow hidden
+	transition box-shadow 500ms
+
+	&:hover
+		box-shadow 1px 1px 15px $c-border
+
+	&:hover &
+		&-title
+			&:after
+				height 2px
+
+		&-date
+			color $c-main
 
 	&-thumb
 		size 100% 180px
@@ -18,10 +30,22 @@
 		@extend $clearfix
 
 	&-title
+		display inline-block
+		position relative
 		color $c-main
 		margin 0 0 0.1em
 
+		&:after
+			content ''
+			display block
+			absolute left 0 bottom 0 right 0
+			size 100% 0
+			background-color $c-main
+			transition height 300ms
+
+
 	&-place
+		color $text-color
 		margin 0
 		font-weight normal
 		font-size 1rem
@@ -39,6 +63,9 @@
 		float left
 		text-align center
 		margin-right 1.6rem
+		color $text-color
+		transition color 300ms
+
 
 		&-day
 			display block
